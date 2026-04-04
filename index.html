@@ -1,51 +1,61 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fragments</title> 
-  <link rel="icon" href="img/favicon.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fragments</title>
+    <link rel="icon" href="img/favicon.png">
 </head>
 <body>
 
-    <!-- MENÚ SUPERIOR -->
-    <header class="navbar">
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="seccion1.html">Sección 1</a></li>
-                <li><a href="seccion2.html">Sección 2</a></li>
-                <li><a href="seccion3.html">Sección 3</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header class="navbar">
+    <nav class="nav-container">
+      <a href="index.html">Inicio</a>
+      <a href="seccion1.html">Sección 1</a>
+      <a href="seccion2.html">Sección 2</a>
+      <a href="seccion3.html">Sección 3</a>
+    </nav>
+  </header>
 
-    <!-- BANNER -->
-    <section class="banner">
-        <img src="img/banner-2.png" alt="Fragments banner">
+  <section class="banner">
+    <img src="img/banner-2.png" alt="Fragments banner">
+  </section>
+
+  <main class="main-content">
+
+    <section class="social-buttons" aria-label="Redes sociales">
+      <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="social-link">
+        <img src="instagram.png" alt="Instagram">
+      </a>
+
+      <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" class="social-link">
+        <img src="twitter.png" alt="Twitter">
+      </a>
+
+      <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="social-link">
+        <img src="youtube.png" alt="YouTube">
+      </a>
+
+      <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" class="social-link">
+        <img src="tiktok.png" alt="TikTok">
+      </a>
     </section>
 
-    <!-- BOTONES REDES SOCIALES -->
-    <section class="social-buttons">
-        <a href="https://facebook.com" target="_blank" class="circle">F</a>
-        <a href="https://twitter.com" target="_blank" class="circle">T</a>
-        <a href="https://instagram.com" target="_blank" class="circle">I</a>
-        <a href="https://youtube.com" target="_blank" class="circle">Y</a>
+    <section class="text-video-section">
+      <div class="text-box">
+        <p>Texto de prueba centrado para la página web.</p>
+      </div>
+
+      <div class="video-box">
+        <iframe
+          src="https://www.youtube.com/embed/pROj9i8fC6A"
+          title="Video de YouTube"
+          allowfullscreen>
+        </iframe>
+      </div>
     </section>
 
-    <!-- TEXTO + VIDEO -->
-    <section class="content">
-        <div class="text-video">
-            <p>Este es un texto de prueba centrado para tu página web.</p>
-
-            <iframe 
-                src="https://www.youtube.com/embed/pROj9i8fC6A" 
-                title="YouTube video"
-                frameborder="0"
-                allowfullscreen>
-            </iframe>
-        </div>
-    </section>
+  </main>
 
 </body>
 </html>
