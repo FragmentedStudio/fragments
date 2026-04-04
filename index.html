@@ -1,51 +1,51 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Fragments</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fragments</title> 
   <link rel="icon" href="img/favicon.png">
-
-  <style>
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      background-color: #000;
-      color: #fff;
-      font-family: Arial, sans-serif;
-      overflow-x: hidden;
-    }
-
-.banner {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
-.banner img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-    h1 {
-      font-size: 2.6rem;
-      letter-spacing: 4px;
-      font-weight: normal;
-    }
-  </style>
 </head>
-
 <body>
 
-  <div class="banner">
-    <img src="img/banner-2.png" alt="Fragments banner">
-  </div>
-  <p>Who is this? <a href="https://youtu.be/pROj9i8fC6A?si=3h56dHJW2xlAszr2"> Fragments</a></p>
-  <br>
-  <hr>
+    <!-- MENÚ SUPERIOR -->
+    <header class="navbar">
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="seccion1.html">Sección 1</a></li>
+                <li><a href="seccion2.html">Sección 2</a></li>
+                <li><a href="seccion3.html">Sección 3</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- BANNER -->
+    <section class="banner">
+        <img src="img/banner-2.png" alt="Fragments banner">
+    </section>
+
+    <!-- BOTONES REDES SOCIALES -->
+    <section class="social-buttons">
+        <a href="https://facebook.com" target="_blank" class="circle">F</a>
+        <a href="https://twitter.com" target="_blank" class="circle">T</a>
+        <a href="https://instagram.com" target="_blank" class="circle">I</a>
+        <a href="https://youtube.com" target="_blank" class="circle">Y</a>
+    </section>
+
+    <!-- TEXTO + VIDEO -->
+    <section class="content">
+        <div class="text-video">
+            <p>Este es un texto de prueba centrado para tu página web.</p>
+
+            <iframe 
+                src="https://www.youtube.com/embed/pROj9i8fC6A" 
+                title="YouTube video"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </section>
 
 </body>
 </html>
