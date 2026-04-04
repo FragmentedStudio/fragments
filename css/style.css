@@ -1,19 +1,31 @@
-* {
-  box-sizing: border-box;
-}
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-html, body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  background: #000;
-  color: #fff;
-  font-family: Arial, sans-serif;
+.banner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
+.banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+    h1 {
+      font-size: 2.6rem;
+      letter-spacing: 4px;
+      font-weight: normal;
+    }
 
 body {
-  min-height: 100vh;
-}
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+    }
 
 /* NAVBAR */
 .navbar {
