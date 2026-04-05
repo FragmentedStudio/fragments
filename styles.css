@@ -56,7 +56,9 @@ img {
 }
 
 .nav-container a:active {
-  opacity: 0.5;
+  opacity: 1;
+  pointer-events: none;
+  border-bottom: 1px solid white;
 }
 /* BANNER */
 .banner img {
