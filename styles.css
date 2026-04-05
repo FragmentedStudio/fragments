@@ -51,6 +51,13 @@ img {
   text-decoration: none;
 }
 
+.nav-container a:hover {
+  opacity: 0.7;
+}
+
+.nav-container a:active {
+  opacity: 0.5;
+}
 /* BANNER */
 .banner img {
   width: 100%;
