@@ -7,7 +7,10 @@
 html, body {
   background: #000;
   color: #fff;
-  font-family: Arial, sans-serif;
+  font-family: Palatino Linotype, Times New Roman;
+  font-size:14px;
+  font-weight:normal;
+  line-height:1.6em;
   overflow-x: hidden;
 }
 
