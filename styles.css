@@ -14,6 +14,17 @@ html, body {
   overflow-x: hidden;
 }
 
+.text-box {
+  padding: 10px 8px;
+}
+ 
+  .main-content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 20px 40px;
+ }
+
 /* NAVBAR */
 .navbar {
   width: 100%;
@@ -79,8 +90,19 @@ html, body {
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
+  
+  .main-content {
+    padding: 20px 16px 30px;
+  }
+
   .text-video-section {
     flex-direction: column;
+    gap: 20px;
+  }
+
+  .text-box,
+  .video-box {
+    width: 100%;
   }
 
   .social-link {
