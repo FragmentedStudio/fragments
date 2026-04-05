@@ -7,11 +7,16 @@
 html, body {
   background: #000;
   color: #fff;
-  font-family: Palatino Linotype, Times New Roman;
-  font-size:14px;
+  font-family: "Palatino Linotype", "Times New Roman", serif;
   font-weight:normal;
-  line-height:1.6em;
+  font-size: 16px;
+  line-height: 1.7;
   overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .text-box {
@@ -38,6 +43,7 @@ html, body {
   display: flex;
   justify-content: center;
   gap: 24px;
+  flex-wrap: wrap;
 }
 
 .nav-container a {
@@ -68,12 +74,19 @@ html, body {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.social-link:hover img {
+  transform: scale(1.1);
+  opacity: 0.85;
 }
 
 /* TEXTO + VIDEO */
 .text-video-section {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 20px;
   max-width: 1000px;
   margin: auto;
