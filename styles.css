@@ -115,6 +115,44 @@ img {
   aspect-ratio: 16/9;
 }
 
+/* TEAM */
+.team-section {
+  margin-top: 30px;
+}
+
+.team-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.team-card {
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  width: 120px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.team-card img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 50%; /* 👈 hace la imagen circular */
+}
+
+.team-card p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* HOVER */
+.team-card:hover {
+  transform: scale(1.05);
+  opacity: 0.85;
+}
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
 
