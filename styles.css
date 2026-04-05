@@ -153,6 +153,44 @@ img {
   opacity: 0.85;
 }
 
+/* PERFIL */
+.profile-section {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.profile-container {
+  max-width: 600px;
+  margin: auto;
+}
+
+.profile-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.profile-description {
+  margin: 10px 0;
+  opacity: 0.9;
+}
+
+.profile-role {
+  margin-top: 5px;
+}
+
+/* CONTENIDO */
+.profile-content {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.profile-content h2 {
+  margin-bottom: 10px;
+}
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
 
