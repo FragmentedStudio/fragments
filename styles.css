@@ -267,6 +267,88 @@ img {
   opacity: 0.9;
 }
 
+/* HEADER COMIC */
+.comic-header {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.comic-cover {
+  width: 220px;
+  aspect-ratio: 2/3;
+  object-fit: cover;
+}
+
+.comic-data {
+  max-width: 500px;
+}
+
+.comic-synopsis {
+  margin: 10px 0;
+  opacity: 0.85;
+}
+
+/* SWITCH */
+.language-switch {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.switch-container {
+  display: inline-flex;
+  border: 1px solid white;
+}
+
+.lang-btn {
+  padding: 8px 20px;
+  background: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.lang-btn.active {
+  background: white;
+  color: black;
+}
+
+/* CAPÍTULOS */
+.chapters-section {
+  margin-top: 40px;
+}
+
+.chapters-grid {
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+}
+
+.chapter {
+  text-align: center;
+  padding: 15px;
+  border: 1px solid white;
+}
+
+.active-chapter {
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.active-chapter:hover {
+  background: white;
+  color: black;
+}
+
+/* BLOQUEADOS */
+.locked {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
@@ -307,6 +389,15 @@ body {
 
   .comics-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .comic-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .chapters-grid {
+    grid-template-columns: repeat(4, 1fr);
   }
 
   .social-link {
