@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Fragments | Comics</title>
 
   <link rel="stylesheet" href="../styles.css">
@@ -11,7 +11,7 @@
 
 <body>
 
-  <!-- NAVBAR (SIEMPRE IGUAL) -->
+  <!-- NAVBAR -->
   <header class="navbar">
     <nav class="nav-container">
       <a href="../index.html">Inicio</a>
@@ -21,21 +21,43 @@
     </nav>
   </header>
 
-  <!-- CONTENIDO PRINCIPAL -->
   <main class="main-content">
 
-    <!-- TÍTULO DE LA PÁGINA -->
+    <!-- TÍTULO -->
     <section>
       <h1 style="text-align:center; margin-bottom:20px;">
         Comics
       </h1>
     </section>
 
-    <!-- CONTENIDO PERSONALIZADO -->
+    <!-- DESCRIPCIÓN -->
     <section>
-      <p style="text-align:center; max-width:600px; margin:auto;">
-        Aquí va el contenido de esta sección.
+      <p style="text-align:center; max-width:700px; margin:auto; opacity:0.8;">
+        Historias dentro del universo de Fragments. Explora nuestros proyectos y sigue cada publicación.
       </p>
+    </section>
+
+    <!-- GRID DE COMICS -->
+    <section class="comics-grid">
+
+      <!-- COMIC 1 -->
+      <a href="comics/endless.html" class="comic-card">
+        <img src="../img/comics/endless-cover.png" alt="Endless">
+        <div class="comic-info">
+          <h3>Endless</h3>
+          <p>Capítulo 1 disponible</p>
+        </div>
+      </a>
+
+      <!-- COMIC 2 -->
+      <a href="comics/proximamente.html" class="comic-card">
+        <img src="../img/comics/proximo.png" alt="Próximamente">
+        <div class="comic-info">
+          <h3>Próximamente</h3>
+          <p>En desarrollo</p>
+        </div>
+      </a>
+
     </section>
 
   </main>
