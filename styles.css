@@ -192,6 +192,34 @@ img {
   margin-bottom: 10px;
 }
 
+/* CONCEPT ART BOTONES */
+.concept-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.concept-banner {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+
+.concept-banner img {
+  width: 100%;
+  height: 250px; /* altura tipo banner */
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* HOVER (solo desktop) */
+.concept-banner:hover img {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
 
@@ -224,6 +252,10 @@ body {
     object-fit: cover;
     object-position: center;
   }
+
+  .concept-banner img {
+  height: 180px;
+}
 
   .social-link {
     width: 50px;
