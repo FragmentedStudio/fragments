@@ -204,6 +204,7 @@ img {
   display: block;
   width: 100%;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .concept-banner img {
@@ -212,6 +213,10 @@ img {
   object-fit: cover;
   object-position: center;
   transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.concept-banner:active img {
+  transform: scale(0.98);
 }
 
 /* HOVER (solo desktop) */
