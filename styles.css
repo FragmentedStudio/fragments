@@ -25,6 +25,10 @@ hr {
   opacity: 0.3;
 }
 
+a {
+  color: inherit;
+}
+
 .text-box {
   padding: 10px 8px;
 }
