@@ -149,7 +149,7 @@ a {
   width: 100%;
   aspect-ratio: 1/1;
   object-fit: cover;
-  border-radius: 50%; /* 👈 hace la imagen circular */
+  border-radius: 50%;
 }
 
 .team-card p {
@@ -365,9 +365,9 @@ a {
 
 /* LINKS AUTOR */
 .author-link {
-  color: #FF002B;
+  color: #E042FF;
   text-decoration: none;
-  border-bottom: 1px solid #FF002B;
+  border-bottom: 1px solid #E042FF;
 }
 
 .author-link:hover {
