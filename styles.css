@@ -401,6 +401,34 @@ a {
   display: block;
 }
 
+/* NAVEGACION CAPITULOS */
+.chapter-navigation {
+  margin: 40px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.nav-btn {
+  border: 1px solid white;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: white;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+.nav-btn:hover {
+  background: white;
+  color: black;
+}
+
+.disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
 
