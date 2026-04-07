@@ -365,9 +365,9 @@ a {
 
 /* LINKS AUTOR */
 .author-link {
-  color: #ccc;
+  color: #FF002B;
   text-decoration: none;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #FF002B;
 }
 
 .author-link:hover {
