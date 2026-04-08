@@ -218,7 +218,7 @@ a {
 
 .concept-banner img {
   width: 100%;
-  height: 250px; /* altura tipo banner */
+  height: 250px;
   object-fit: cover;
   object-position: center;
   transition: transform 0.3s ease, opacity 0.3s ease;
@@ -252,7 +252,7 @@ a {
 
 .comic-card img {
   width: 100%;
-  aspect-ratio: 2 / 3; /* formato portada */
+  aspect-ratio: 2 / 3;
   object-fit: cover;
 }
 
@@ -386,7 +386,7 @@ a {
   margin-top: 5px;
 }
 
-/* PÁGINAS (lector tipo scroll vertical) */
+/* PÁGINAS (scroll) */
 .comic-pages {
   margin-top: 30px;
   display: flex;
@@ -434,7 +434,7 @@ a {
   scroll-snap-type: y mandatory;
 }
 
-/* cada página */
+/* indiv. página */
 .page {
   height: 100vh;
   display: flex;
@@ -451,29 +451,32 @@ a {
   object-fit: contain;
 }
 
-/* MODO LECTOR (full ancho en capítulos) */
+/* MODO LECTOR (ancho) */
 .reader-mode {
   max-width: 100%;
   padding: 0;
 }
 
-/* CONTENEDOR TIPO TIKTOK */
+/* CONTENEDOR */
 .reader-container {
   height: 100vh;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
 }
 
 /* CADA "PÁGINA" */
 .reader-page {
   height: 100vh;
   scroll-snap-align: start;
+  scroll-snap-stop: always;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
-/* INTRO (primera pantalla) */
+/* INTRO */
 .intro-page {
   padding: 20px;
 }
@@ -483,10 +486,12 @@ a {
   text-align: center;
 }
 
-/* IMÁGENES FULL SCREEN REAL */
+/* Fullscreen */
 .reader-page img {
-  width: 100vw;       /* 👈 CLAVE */
-  height: 100vh;      /* 👈 CLAVE */
+  width: 100vw;
+  height: 100vh;
+  width: auto;
+  height: auto;
   object-fit: contain;
 }
 
@@ -496,8 +501,16 @@ a {
 }
 
 .nav-title {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  text-align: center;
   opacity: 0.7;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 /* FINAL */
@@ -514,6 +527,27 @@ a {
 /* EVITAR ESPACIOS LATERALES */
 body, html {
   overflow-x: hidden;
+}
+
+.chapter-meta {
+  margin-bottom: 15px;
+}
+
+.switch-container {
+  margin-top: 10px;
+}
+
+.scroll-indicator {
+  width: 40px;
+  margin: 20px auto;
+  display: block;
+  opacity: 0.7;
+}
+
+.end-gif {
+  width: 120px;
+  margin-bottom: 20px;
+  opacity: 0.8;
 }
 
 /* RESPONSIVE */
