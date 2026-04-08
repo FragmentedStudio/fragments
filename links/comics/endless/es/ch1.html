@@ -149,10 +149,10 @@ const warning = document.getElementById("desktopWarning");
 if (!isMobile()) {
   // PC → mostrar advertencia
   warning.style.display = "flex";
-  document.querySelector(".reader-container").style.display = "none";
+  document.body.classList.remove("no-desktop-warning");
 } else {
   // móvil → ocultar advertencia
-  warning.style.display = "none";
+  warning.remove();
 }
 </script>
   
@@ -161,6 +161,21 @@ if (!isMobile()) {
   <style>
 .desktop-warning { display: none; }
 </style>
+
+  <script>
+if (window.matchMedia('(display-mode: standalone)').matches) {
+  document.body.classList.add("app-mode");
+}
+</script>
+  
+  <script>
+/* DETECTAR SI ES APP INSTALADA */
+const isApp = window.matchMedia('(display-mode: standalone)').matches;
+
+if (isApp) {
+  document.body.classList.add("app-mode");
+}
+</script>
   
 </body>
 </html>
