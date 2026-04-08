@@ -70,6 +70,12 @@ a chance no human will ever get again.”<br><br>
     </div>
 
   </main>
-
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("/sw.js")
+    .then(() => console.log("SW activo"))
+    .catch(err => console.log("Error SW:", err));
+}
+</script>
 </body>
 </html>
