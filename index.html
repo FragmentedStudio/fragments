@@ -11,7 +11,7 @@
   <link rel="preload" as="image" href="img/team/miembro1.png">
   <link rel="preload" as="image" href="img/team/miembro2.png">
   <link rel="preload" as="image" href="img/comics/endless-cover.png">
-  <link rel="manifest" href="manifest.json">
+  <link rel="manifest" href="./manifest.json">
 <meta name="theme-color" content="#000000">
 </head>
 
@@ -72,7 +72,7 @@ a chance no human will ever get again.”<br><br>
   </main>
 <script>
 if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("/sw.js")
+  navigator.serviceWorker.register("./sw.js")
     .then(() => console.log("SW activo"))
     .catch(err => console.log("Error SW:", err));
 }
