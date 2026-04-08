@@ -564,6 +564,16 @@ body, html {
   color: white;
 }
 
+.qr-code {
+  width: 180px;
+  height: 180px;
+  margin: 20px auto;
+  display: block;
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
 
