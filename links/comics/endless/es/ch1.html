@@ -15,7 +15,9 @@
   
 <!-- CONTENEDOR TIPO TIKTOK -->
 <main class="reader-container">
-
+<div class="page-indicator" id="pageIndicator">
+  1 / 4
+</div>
   <!-- SLIDE 1 (HEADER, NO IMAGEN) -->
   <section class="reader-page intro-page">
 
@@ -80,6 +82,26 @@
   </section>
 
 </main>
+<script>
+const pages = document.querySelectorAll(".reader-page:not(.intro-page)");
+const indicator = document.getElementById("pageIndicator");
 
+const totalPages = pages.length;
+
+// Detectar página visible
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const index = [...pages].indexOf(entry.target);
+      indicator.textContent = (index + 1) + " / " + totalPages;
+    }
+  });
+}, {
+  threshold: 0.6
+});
+
+// Observar todas las páginas
+pages.forEach(page => observer.observe(page));
+</script>
 </body>
 </html>
