@@ -8,26 +8,27 @@
   <link rel="stylesheet" href="../../../../styles.css">
   <link rel="icon" href="../../../../img/favicon.png">
 
-  <!-- PRELOAD (solo primera imagen) -->
   <link rel="preload" as="image" href="../../../../img/comics/endless/es/ch1/page1.png">
 </head>
 
 <body>
 
-  <!-- NAVBAR -->
-  <header class="navbar">
-    <nav class="nav-container">
-      <a href="../../../../index.html">Home</a>
-      <a href="../../../comics.html" class="active">Library</a>
-      <a href="../../../conceptart.html">Concept Art</a>
-      <a href="../../../team.html">Team Fragments</a>
-    </nav>
-  </header>
+<header class="navbar">
+  <nav class="nav-container">
+    <a href="../../../../index.html">Home</a>
+    <a href="../../../comics.html" class="active">Library</a>
+    <a href="../../../conceptart.html">Concept Art</a>
+    <a href="../../../team.html">Team Fragments</a>
+  </nav>
+</header>
 
-<main class="main-content reader-mode">
-  
-    <!-- INFO CAPÍTULO -->
-    <section class="chapter-header">
+<!-- CONTENEDOR TIPO TIKTOK -->
+<main class="reader-container">
+
+  <!-- SLIDE 1 (HEADER, NO IMAGEN) -->
+  <section class="reader-page intro-page">
+
+    <div class="intro-content">
 
       <h1>Endless — Capítulo 1</h1>
 
@@ -40,39 +41,50 @@
         Colaboradores: —
       </p>
 
-    </section>
-
-    <!-- SWITCH IDIOMA -->
-    <section class="language-switch">
+      <!-- SWITCH -->
       <div class="switch-container">
         <a href="../en/ch1.html" class="lang-btn">English</a>
         <a href="../es/ch1.html" class="lang-btn active">Español</a>
       </div>
-    </section>
 
-    <!-- PÁGINAS -->
-    <section class="comic-pages">
+      <!-- NAV SUPERIOR -->
+      <div class="chapter-navigation top-nav">
+        <p class="nav-title">Navegar entre capítulos</p>
 
-      <!-- primera sin lazy -->
-      <img src="../../../../img/comics/endless/es/ch1/page1.png" alt="Página 1">
-
-      <img src="../../../../img/comics/endless/es/ch1/page2.png" loading="lazy" alt="Página 2">
-      <img src="../../../../img/comics/endless/es/ch1/page3.png" loading="lazy" alt="Página 3">
-
-    </section>
-
-    <!-- NAVEGACIÓN -->
-    <div class="chapter-navigation">
-
-      <span class="nav-btn disabled">← Anterior</span>
-
-      <a href="../../endless_es.html" class="nav-btn">Volver</a>
-
-      <a href="ch2.html" class="nav-btn">Proximo →</a>
+        <span class="nav-btn disabled">← Anterior</span>
+        <a href="../../endless_es.html" class="nav-btn">Volver</a>
+        <a href="ch2.html" class="nav-btn">Siguiente →</a>
+      </div>
 
     </div>
 
-  </main>
+  </section>
+
+  <!-- PÁGINAS DEL COMIC -->
+  <section class="reader-page">
+    <img src="../../../../img/comics/endless/es/ch1/page1.png">
+  </section>
+
+  <section class="reader-page">
+    <img src="../../../../img/comics/endless/es/ch1/page2.png" loading="lazy">
+  </section>
+
+  <section class="reader-page">
+    <img src="../../../../img/comics/endless/es/ch1/page3.png" loading="lazy">
+  </section>
+
+  <!-- NAV FINAL -->
+  <section class="reader-page end-page">
+
+    <div class="chapter-navigation">
+      <span class="nav-btn disabled">← Anterior</span>
+      <a href="../../endless_es.html" class="nav-btn">Volver</a>
+      <a href="ch2.html" class="nav-btn">Siguiente →</a>
+    </div>
+
+  </section>
+
+</main>
 
 </body>
 </html>
