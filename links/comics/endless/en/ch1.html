@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -9,72 +9,153 @@
   <link rel="icon" href="../../../../img/favicon.png">
   <link rel="manifest" href="../../../../manifest.json">
 <meta name="theme-color" content="#000000">
+  <link rel="preload" as="image" href="../../../../img/comics/endless/es/ch1/page1.png">
 </head>
 
 <body>
+  <div class="desktop-warning" id="desktopWarning">
+  <div class="warning-content">
+    <h2>Optimized for mobile</h2>
+    <p>This chapter is designed to be read on a phone.</p>
+    <p>Open this page on your mobile device for a better experience.</p>
+    <!-- QR -->
+    <img id="qrCode" class="qr-code">
+    <p class="small-text">Escanea para ir a la biblioteca</p>
+    <p class="small-text">Fragments Studio</p>
+  </div>
+</div>
+<!-- CONTENEDOR TIPO TIKTOK -->
+<main class="reader-container">
+<div class="page-indicator" id="pageIndicator">
+  1 / 4
+</div>
+  <!-- SLIDE 1 (HEADER, NO IMAGEN) -->
+  <section class="reader-page intro-page">
 
-  <!-- NAVBAR -->
-  <header class="navbar">
-    <nav class="nav-container">
-      <a href="../../../../index.html">Home</a>
-      <a href="../../../comics.html" class="active">Library</a>
-      <a href="../../../conceptart.html">Concept Art</a>
-      <a href="../../../team.html">Team Fragments</a>
-    </nav>
-  </header>
+    <div class="intro-content">
 
-  <main class="main-content">
-
-    <!-- INFO CAPÍTULO -->
-    <section class="chapter-header">
-
-      <h1>Endless — Chapter 1</h1>
+      <h1>Endless — Capítulo 1</h1>
 
       <p class="chapter-meta">
-        Published: 2026 · 
-        Author: <a href="../../../team/drawfoox.html" class="author-link">Drawfoox</a>
+        Publicado: 2026 · 
+        Autor: <a href="../../../team/drawfoox.html" class="author-link">Drawfoox</a>
       </p>
 
       <p class="chapter-meta">
-        Contributors: —
+        Colaboradores: —
       </p>
 
-    </section>
-
-    <!-- SWITCH IDIOMA -->
-    <section class="language-switch">
+      <!-- SWITCH -->
       <div class="switch-container">
-        <a href="../en/ch1.html" class="lang-btn active">English</a>
-        <a href="../es/ch1.html" class="lang-btn">Español</a>
+        <a href="../en/ch1.html" class="lang-btn">English</a>
+        <a href="../es/ch1.html" class="lang-btn active">Español</a>
       </div>
-    </section>
 
-    <!-- PÁGINAS -->
-    <section class="comic-pages">
+      <!-- INDICADOR SCROLL -->
+<img src="../../../../img/gif/scroll-es.gif" class="scroll-indicator">
 
-      <img src="../../../../img/comics/endless/en/ch1/page1.png" alt="Page 1">
-      <img src="../../../../img/comics/endless/en/ch1/page2.png" loading="lazy" alt="Page 2">
-      <img src="../../../../img/comics/endless/en/ch1/page3.png" loading="lazy" alt="Page 3">
+      <!-- NAV SUPERIOR -->
+      <div class="chapter-navigation top-nav">
+        <p class="nav-title">Navegar entre capítulos</p>
+        <div class="nav-buttons">
+        <span class="nav-btn disabled">← Anterior</span>
+        <a href="../../endless_es.html" class="nav-btn">Volver</a>
+        <a href="ch2.html" class="nav-btn">Siguiente →</a>
+      </div>
 
-    </section>
+    </div>
+
+  </section>
+
+  <!-- PÁGINAS DEL COMIC -->
+  <section class="reader-page">
+    <img src="../../../../img/comics/endless/es/ch1/page1.png">
+  </section>
+
+  <section class="reader-page">
+    <img src="../../../../img/comics/endless/es/ch1/page2.png" loading="lazy">
+  </section>
+
+  <section class="reader-page">
+    <img src="../../../../img/comics/endless/es/ch1/page3.png" loading="lazy">
+  </section>
+
+  <!-- NAV FINAL -->
+  <section class="reader-page end-page">
+    <img src="../../../../img/gif/end.gif" class="end-gif">
 
     <div class="chapter-navigation">
+      <span class="nav-btn disabled">← Anterior</span>
+      <a href="../../endless_es.html" class="nav-btn">Volver</a>
+      <a href="ch2.html" class="nav-btn">Siguiente →</a>
+    </div>
 
-  <span class="nav-btn disabled">← Return</span>
+  </section>
 
-  <a href="../../endless_en.html" class="nav-btn">Exit</a>
-
-  <a href="ch2.html" class="nav-btn">Next →</a>
-
-</div>
-
-  </main>
+</main>
 <script>
+const pages = document.querySelectorAll(".reader-page:not(.intro-page)");
+const indicator = document.getElementById("pageIndicator");
+
+const totalPages = pages.length;
+
+// Detectar página visible
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const index = [...pages].indexOf(entry.target);
+      indicator.textContent = (index + 1) + " / " + totalPages;
+    }
+  });
+}, {
+  threshold: 0.6
+});
+
+// Observar todas las páginas
+pages.forEach(page => observer.observe(page));
+</script>
+  
+  <script>
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    window.scrollTo(0, 1);
+  }, 100);
+});
+</script>
+  <script>
 if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("/sw.js")
+  navigator.serviceWorker.register("./sw.js")
     .then(() => console.log("SW activo"))
     .catch(err => console.log("Error SW:", err));
 }
 </script>
+  <script>
+const qrImg = document.getElementById("qrCode");
+
+const libraryURL = "https://fragmentedstudio.github.io/fragments/links/comics.html";
+
+qrImg.src = "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=" 
+  + encodeURIComponent(libraryURL);
+</script>
+  
+<script>
+const warning = document.getElementById("desktopWarning");
+
+const isTouchDevice = window.matchMedia("(pointer: coarse)").matches;
+
+if (!isTouchDevice) {
+  // PC
+  warning.style.display = "flex";
+  document.querySelector(".reader-container").style.display = "none";
+} else {
+  // Móvil → eliminar completamente
+  warning.remove();
+}
+</script>
+  
+  <style>
+.desktop-warning { display: none; }
+</style>
+  
 </body>
 </html>
