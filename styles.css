@@ -590,16 +590,6 @@ body.no-desktop-warning .desktop-warning {
   display: none !important;
 }
 
-/* WEB NORMAL */
-.reader-page {
-  height: 100vh;
-}
-
-/* APP INSTALADA */
-body.app-mode .reader-page {
-  height: 100dvh;
-}
-
 /* RESPONSIVE */
 @media (max-width: 768px) {
 
