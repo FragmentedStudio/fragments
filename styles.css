@@ -13,6 +13,7 @@ html, body {
   font-size: 16px;
   line-height: 1.7;
   overflow-x: hidden;
+  overscroll-behavior: none;
 }
 
 img {
@@ -459,7 +460,7 @@ a {
 
 /* CONTENEDOR */
 .reader-container {
-  height: 100vh;
+  height: 100dvh;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
@@ -467,7 +468,7 @@ a {
 
 /* CADA "PÁGINA" */
 .reader-page {
-  height: 100vh;
+  height: 100dvh;
   scroll-snap-align: start;
   scroll-snap-stop: always;
   display: flex;
