@@ -20,6 +20,7 @@
     <p>Abre esta página en tu dispositivo móvil para una mejor experiencia.</p>
     <!-- QR -->
     <img id="qrCode" class="qr-code">
+    <p class="small-text">Escanea para ir a la biblioteca</p>
     <p class="small-text">Fragments Studio</p>
   </div>
 </div>
@@ -123,7 +124,7 @@ window.addEventListener("load", () => {
 </script>
   <script>
 if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("/sw.js")
+  navigator.serviceWorker.register("./sw.js")
     .then(() => console.log("SW activo"))
     .catch(err => console.log("Error SW:", err));
 }
@@ -136,27 +137,21 @@ const libraryURL = "https://fragmentedstudio.github.io/fragments/links/comics.ht
 qrImg.src = "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=" 
   + encodeURIComponent(libraryURL);
 </script>
-  <script>
-function isMobile() {
-  return (
-    ('ontouchstart' in window) ||
-    (navigator.maxTouchPoints > 0)
-  );
-}
-
+  
+<script>
 const warning = document.getElementById("desktopWarning");
 
-if (!isMobile()) {
-  // PC → mostrar advertencia
+const isTouchDevice = window.matchMedia("(pointer: coarse)").matches;
+
+if (!isTouchDevice) {
+  // PC
   warning.style.display = "flex";
-  document.body.classList.remove("no-desktop-warning");
+  document.querySelector(".reader-container").style.display = "none";
 } else {
-  // móvil → ocultar advertencia
+  // Móvil → eliminar completamente
   warning.remove();
 }
 </script>
-  
-  <p class="small-text">Escanea para ir a la biblioteca</p>
   
   <style>
 .desktop-warning { display: none; }
@@ -168,11 +163,8 @@ if (window.matchMedia('(display-mode: standalone)').matches) {
 }
 </script>
   
-  <script>
-/* DETECTAR SI ES APP INSTALADA */
-const isApp = window.matchMedia('(display-mode: standalone)').matches;
-
-if (isApp) {
+<script>
+if (window.matchMedia('(display-mode: standalone)').matches) {
   document.body.classList.add("app-mode");
 }
 </script>
