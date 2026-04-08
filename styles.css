@@ -457,6 +457,65 @@ a {
   padding: 0;
 }
 
+/* CONTENEDOR TIPO TIKTOK */
+.reader-container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+/* CADA "PÁGINA" */
+.reader-page {
+  height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* INTRO (primera pantalla) */
+.intro-page {
+  padding: 20px;
+}
+
+.intro-content {
+  max-width: 500px;
+  text-align: center;
+}
+
+/* IMÁGENES FULL SCREEN REAL */
+.reader-page img {
+  width: 100vw;       /* 👈 CLAVE */
+  height: 100vh;      /* 👈 CLAVE */
+  object-fit: contain;
+}
+
+/* NAV SUPERIOR */
+.top-nav {
+  margin-top: 20px;
+}
+
+.nav-title {
+  margin-bottom: 10px;
+  opacity: 0.7;
+}
+
+/* FINAL */
+.end-page {
+  flex-direction: column;
+}
+
+/* QUITAR LIMITES GLOBALES EN ESTE MODO */
+.reader-container {
+  margin: 0;
+  padding: 0;
+}
+
+/* EVITAR ESPACIOS LATERALES */
+body, html {
+  overflow-x: hidden;
+}
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
 
