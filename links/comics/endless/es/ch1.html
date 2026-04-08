@@ -13,7 +13,7 @@
 </head>
 
 <body>
-  <div class="desktop-warning">
+  <div class="desktop-warning" id="desktopWarning">
   <div class="warning-content">
     <h2>Optimizado para móviles</h2>
     <p>Este capítulo está diseñado para leerse en teléfono.</p>
@@ -136,6 +136,31 @@ const libraryURL = "https://fragmentedstudio.github.io/fragments/links/comics.ht
 qrImg.src = "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=" 
   + encodeURIComponent(libraryURL);
 </script>
+  <script>
+function isMobile() {
+  return (
+    ('ontouchstart' in window) ||
+    (navigator.maxTouchPoints > 0)
+  );
+}
+
+const warning = document.getElementById("desktopWarning");
+
+if (!isMobile()) {
+  // PC → mostrar advertencia
+  warning.style.display = "flex";
+  document.querySelector(".reader-container").style.display = "none";
+} else {
+  // móvil → ocultar advertencia
+  warning.style.display = "none";
+}
+</script>
+  
   <p class="small-text">Escanea para ir a la biblioteca</p>
+  
+  <style>
+.desktop-warning { display: none; }
+</style>
+  
 </body>
 </html>
