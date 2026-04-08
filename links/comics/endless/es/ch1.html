@@ -13,7 +13,16 @@
 </head>
 
 <body>
-  
+  <div class="desktop-warning">
+  <div class="warning-content">
+    <h2>Optimizado para móviles</h2>
+    <p>Este capítulo está diseñado para leerse en teléfono.</p>
+    <p>Abre esta página en tu dispositivo móvil para una mejor experiencia.</p>
+    <!-- QR -->
+    <img id="qrCode" class="qr-code">
+    <p class="small-text">Fragments Studio</p>
+  </div>
+</div>
 <!-- CONTENEDOR TIPO TIKTOK -->
 <main class="reader-container">
 <div class="page-indicator" id="pageIndicator">
@@ -119,5 +128,14 @@ if ("serviceWorker" in navigator) {
     .catch(err => console.log("Error SW:", err));
 }
 </script>
+  <script>
+const qrImg = document.getElementById("qrCode");
+
+const libraryURL = "https://fragmentedstudio.github.io/fragments/links/comics.html";
+
+qrImg.src = "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=" 
+  + encodeURIComponent(libraryURL);
+</script>
+  <p class="small-text">Escanea para ir a la biblioteca</p>
 </body>
 </html>
