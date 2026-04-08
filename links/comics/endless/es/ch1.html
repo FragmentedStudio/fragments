@@ -103,5 +103,14 @@ const observer = new IntersectionObserver((entries) => {
 // Observar todas las páginas
 pages.forEach(page => observer.observe(page));
 </script>
+  
+  <script>
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    window.scrollTo(0, 1);
+  }, 100);
+});
+</script>
+  
 </body>
 </html>
