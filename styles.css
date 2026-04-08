@@ -592,8 +592,7 @@ body.no-desktop-warning .desktop-warning {
 
 /* WEB NORMAL */
 .reader-page {
-  min-height: 100vh;
-  height: 100dvh;
+  height: 100vh;
 }
 
 /* APP INSTALADA */
